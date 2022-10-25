@@ -18,7 +18,7 @@ const author = content[0].a;
 const quoteLength = quote.length;
 const authorLength = author.length;
 
-const spaceLength = quoteLength - authorLength + OFFSET;
+const spaceLength = Math.max(quoteLength - authorLength + OFFSET, 0);
 const spacing = " ".repeat(spaceLength);
 
 console.log(`"${quote}"\n`);
